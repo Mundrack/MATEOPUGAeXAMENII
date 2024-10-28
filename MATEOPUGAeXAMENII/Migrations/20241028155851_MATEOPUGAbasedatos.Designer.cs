@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MATEOPUGAeXAMENII.Migrations
 {
     [DbContext(typeof(MATEOPUGAeXAMENIIContext))]
-    [Migration("20241028154207_MATEOPUGADB")]
-    partial class MATEOPUGADB
+    [Migration("20241028155851_MATEOPUGAbasedatos")]
+    partial class MATEOPUGAbasedatos
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

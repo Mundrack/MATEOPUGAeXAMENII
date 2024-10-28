@@ -5,7 +5,7 @@
 namespace MATEOPUGAeXAMENII.Migrations
 {
     /// <inheritdoc />
-    public partial class MpdataBase : Migration
+    public partial class MATEOPUGAbasedatos : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
