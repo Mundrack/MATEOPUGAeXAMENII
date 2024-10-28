@@ -4,6 +4,7 @@ namespace MATEOPUGAeXAMENII.Models
 {
     public class MPLIBRO
     {
+        [KeyAttribute]
         public int MP_LibroID { get; set; }
 
         [requered]

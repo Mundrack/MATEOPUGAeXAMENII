@@ -1,0 +1,59 @@
+﻿@model IEnumerable<MATEOPUGAeXAMENII.Models.MPLIBRO>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MP_NombreLibro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MP_Autor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MP_HoraAgregacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MP_FechaPublicacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MP_Nuevo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MP_NombreLibro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MP_Autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MP_HoraAgregacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MP_FechaPublicacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MP_Nuevo)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MP_LibroID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MP_LibroID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MP_LibroID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

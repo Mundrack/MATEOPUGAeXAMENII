@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MATEOPUGAeXAMENII.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<MATEOPUGAeXAMENIIContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MATEOPUGAeXAMENIIContext") ?? throw new InvalidOperationException("Connection string 'MATEOPUGAeXAMENIIContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
