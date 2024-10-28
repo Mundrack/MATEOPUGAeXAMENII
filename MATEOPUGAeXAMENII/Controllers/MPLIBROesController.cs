@@ -20,13 +20,13 @@ namespace MATEOPUGAeXAMENII.Controllers
         }
 
         // GET: MPLIBROes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> MPIndex()
         {
             return View(await _context.MPLIBRO.ToListAsync());
         }
 
         // GET: MPLIBROes/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> MPDetails(int? id)
         {
             if (id == null)
             {
@@ -44,7 +44,7 @@ namespace MATEOPUGAeXAMENII.Controllers
         }
 
         // GET: MPLIBROes/Create
-        public IActionResult Create()
+        public IActionResult MPCreate()
         {
             return View();
         }
@@ -54,7 +54,7 @@ namespace MATEOPUGAeXAMENII.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("MP_LibroID,MP_NombreLibro,MP_Autor,MP_HoraAgregacion,MP_FechaPublicacion,MP_Nuevo")] MPLIBRO mPLIBRO)
+        public async Task<IActionResult> MPCreate([Bind("MP_LibroID,MP_NombreLibro,MP_Autor,MP_HoraAgregacion,MP_FechaPublicacion,MP_Nuevo")] MPLIBRO mPLIBRO)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +66,7 @@ namespace MATEOPUGAeXAMENII.Controllers
         }
 
         // GET: MPLIBROes/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> MPEdit(int? id)
         {
             if (id == null)
             {
@@ -86,7 +86,7 @@ namespace MATEOPUGAeXAMENII.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("MP_LibroID,MP_NombreLibro,MP_Autor,MP_HoraAgregacion,MP_FechaPublicacion,MP_Nuevo")] MPLIBRO mPLIBRO)
+        public async Task<IActionResult> MPEdit(int id, [Bind("MP_LibroID,MP_NombreLibro,MP_Autor,MP_HoraAgregacion,MP_FechaPublicacion,MP_Nuevo")] MPLIBRO mPLIBRO)
         {
             if (id != mPLIBRO.MP_LibroID)
             {
@@ -117,7 +117,7 @@ namespace MATEOPUGAeXAMENII.Controllers
         }
 
         // GET: MPLIBROes/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+        public async Task<IActionResult> MPDelete(int? id)
         {
             if (id == null)
             {
